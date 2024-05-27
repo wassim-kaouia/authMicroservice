@@ -10,7 +10,7 @@ then
     yum install -y nodejs
 
     # echo "Running npm install to install dependencies "
-    # npm install 
+    # npm install  
 
     echo "Express is missing so we need to install it..."
     npm install express
