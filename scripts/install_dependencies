@@ -29,7 +29,7 @@ rm -rf node_modules
 
 echo "Running npm install to install dependencies with nodemon ...  "
 
-npm install && npm install nodemon
+npm install
 
 
 
