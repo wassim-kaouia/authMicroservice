@@ -1,2 +1,4 @@
 #!/bin/bash
-service httpd start
+cd /home/ec2-user/my-fucking-app
+# Start the application in the background
+nohup npm start > /dev/null 2>&1 &
