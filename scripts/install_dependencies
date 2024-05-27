@@ -2,8 +2,10 @@
 
 set -e
 
+cd /home/ec2-user
+mkdir -p Authentification
 
-cd /home/ec2-user/Authentification
+cd Authentification
 
 # Clean npm cache
 npm cache clean --force
