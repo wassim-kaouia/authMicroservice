@@ -1,3 +1,4 @@
 #!/bin/bash
 cd /home/ec2-user/my-nodejs-app
-npm start &
+# Start the application in the background
+nohup npm start > /dev/null 2>&1 &
