@@ -2,12 +2,10 @@ version: 0.0
 os: linux
 files:
    - source: /
-     destination: /home/ec2-user/Authentification
-     overwrite: true
-
+     destination: /home/ec2-user/Authentication
 
 permissions:
-  - object: /home/ec2-user/Authentification
+  - object: /home/ec2-user/Authentication
     pattern: "**"
     owner: ec2-user
     group: ec2-user
