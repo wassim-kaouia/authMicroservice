@@ -1,4 +1,4 @@
 #!/bin/bash
-cd /home/ec2-user/Authentication
+cd /home/ec2-user/my-first-app
 # Start the application in the background
 nohup npm start > /dev/null 2>&1 &

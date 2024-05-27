@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ec2-user/Authentication
+cd /home/ec2-user/my-first-app
 
 # Clean npm cache
 npm cache clean --force
