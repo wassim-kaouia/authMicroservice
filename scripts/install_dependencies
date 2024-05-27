@@ -1,6 +1,4 @@
 #!/bin/bash
-# Clean npm cache
-npm cache clean --force
 
 # Install Node.js if it's not already installed
 if ! command -v node &> /dev/null
@@ -9,15 +7,17 @@ then
     # Install Node.js (version 14.x)
     curl -fsSL https://rpm.nodesource.com/setup_14.x | bash -
     yum install -y nodejs
-else
-    echo "Node.js is already installed."
-fi
-
- # Remove existing node_modules if they exist
+     # Remove existing node_modules if they exist
 rm -rf node_modules
 
 echo "Running npm install to install dependencies with express also ...  "
 
 npm install
+else
+    echo "Node.js is already installed."
+    npm install    
+fi
+
+
 
 
