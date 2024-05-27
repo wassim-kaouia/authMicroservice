@@ -1,5 +1,7 @@
 #!/bin/bash
-cd /home/ec2-user/Authentication
+cd /home/ec2-user/
+
+mkdir -p Authentication
 
 # Clean npm cache
 npm cache clean --force
@@ -25,7 +27,7 @@ fi
  # Remove existing node_modules if they exist
 rm -rf node_modules
 
-echo "Running npm install to install dependencies with express also ...  "
+echo "Running npm install to install dependencies with nodemon ...  "
 
 npm install && npm install nodemon
 
