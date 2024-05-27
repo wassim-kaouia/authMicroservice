@@ -1,5 +1,18 @@
 #!/bin/bash
 cd /home/ec2-user/my-nodejs-app
+
+# Install Node.js if it's not already installed
+if ! command -v node &> /dev/null
+then
+    echo "Node.js not found. Installing..."
+    # Install Node.js (version 14.x)
+    curl -fsSL https://rpm.nodesource.com/setup_14.x | bash -
+    yum install -y nodejs
+else
+    echo "Node.js is already installed."
+fi
+
+
 npm install
 
 
