@@ -14,8 +14,7 @@ echo "Running npm install to install dependencies with express also ...  "
 
 npm install
 else
-    echo "Node.js is already installed."
-    npm install    
+    echo "Node.js is already installed."  
 fi
 
 
