@@ -1,4 +1,8 @@
 #!/bin/bash
+
+set -e
+
+
 cd /home/ec2-user/Authentification
 
 # Clean npm cache
@@ -22,10 +26,16 @@ else
 
 fi
 
- # Remove existing node_modules if they exist
+# Remove existing node_modules if they exist
 rm -rf node_modules
 
-echo "Running npm install to install dependencies with Nodemon later ...  "
+# Remove existing package-lock.json if it exists
+rm -f package-lock.json
+
+# Ensure no npm processes are running
+pkill -f npm || true
+
+echo "Running npm install to install dependencies..."
 
 npm install
 
