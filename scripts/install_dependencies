@@ -1,6 +1,9 @@
 #!/bin/bash
 cd /home/ec2-user/my-nodejs-app
 
+# Clean npm cache
+npm cache clean --force
+
 # Install Node.js if it's not already installed
 if ! command -v node &> /dev/null
 then
@@ -9,8 +12,13 @@ then
     curl -fsSL https://rpm.nodesource.com/setup_14.x | bash -
     yum install -y nodejs
 
+    # Remove existing node_modules if they exist
+    rm -rf node_modules
+
     echo "Running npm install to install dependencies with express also ...  "
     npm install && npm install express
+
+    
 
 else
     echo "Node.js is already installed."
