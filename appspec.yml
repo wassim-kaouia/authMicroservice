@@ -2,27 +2,27 @@ version: 0.0
 os: linux
 files:
    - source: /
-     destination: /home/ec2-user/my-nodejs-app
+     destination: /home/ec2-user/Authentication
 
 permissions:
-  - object: /home/ec2-user/my-nodejs-app
+  - object: /home/ec2-user/Authentication
     pattern: "**"
     owner: ec2-user
     group: ec2-user
     mode: 755
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies
+    - location: ./scripts/install_dependencies
       timeout: 300
       runas: root
       
   ApplicationStart:
-    - location: scripts/start_server
+    - location: ./scripts/start_server
       timeout: 300
       runas: root
 
   ApplicationStop:
-    - location: scripts/stop_server
+    - location: ./scripts/stop_server
       timeout: 300
       runas: root
 

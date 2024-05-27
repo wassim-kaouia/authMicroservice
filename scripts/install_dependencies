@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ec2-user/my-nodejs-app
+cd /home/ec2-user/Authentication
 
 # Clean npm cache
 npm cache clean --force
@@ -26,7 +26,8 @@ fi
 rm -rf node_modules
 
 echo "Running npm install to install dependencies with express also ...  "
-npm install 
+
+npm install && npm install nodemon
 
 
 
