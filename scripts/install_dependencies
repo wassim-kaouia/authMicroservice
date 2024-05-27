@@ -1,12 +1,14 @@
 #!/bin/bash
 
-# set -e
+set -e
+
+mkdir -p /home/ec2-user/Authentification
 
 cd /home/ec2-user/Authentification
 
 
 # Clean npm cache
-# npm cache clean --force
+npm cache clean --force
 
 # Install Node.js if it's not already installed
 if ! command -v node &> /dev/null
