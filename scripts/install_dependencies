@@ -2,7 +2,7 @@
 cd /home/ec2-user/my-first-app
 
 # Clean npm cache
-npm cache clean --force
+# npm cache clean --force
 
 # Install Node.js if it's not already installed
 if ! command -v node &> /dev/null
@@ -18,8 +18,6 @@ else
     echo "Node.js is already installed."
 fi
 
- # Remove existing node_modules if they exist
-rm -rf node_modules
 
 echo "Running npm install to install dependencies with express also ...  "
 
