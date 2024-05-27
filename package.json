@@ -1,0 +1,22 @@
+{
+  "name": "hello-world-nodejs",
+  "version": "1.0.0",
+  "description": "A simple Node.js app that says Hello, World!",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "build": "babel app.js -d dist",
+    "lint": "echo \"No linting configured\"",
+    "test": "echo \"No tests configured\""
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6"
+  }
+}

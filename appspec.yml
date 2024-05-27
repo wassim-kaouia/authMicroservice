@@ -1,8 +1,15 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.html
-    destination: /var/www/html/
+   - source: /
+     destination: /home/ec2-user/my-nodejs-app
+
+permissions:
+  - object: /home/ec2-user/my-nodejs-app
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
+    mode: 755
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
