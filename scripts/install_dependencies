@@ -12,8 +12,8 @@ then
     # echo "Running npm install to install dependencies "
     # npm install 
 
-    # echo "Express is missing so we need to install it..."
-    # npm install express
+    echo "Express is missing so we need to install it..."
+    npm install express
 else
     echo "Node.js is already installed."
 fi
