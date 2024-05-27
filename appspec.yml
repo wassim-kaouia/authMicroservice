@@ -2,10 +2,10 @@ version: 0.0
 os: linux
 files:
    - source: /
-     destination: /home/ec2-user/Authentication
+     destination: /home/ec2-user/Authentification
 
 permissions:
-  - object: /home/ec2-user/Authentication
+  - object: /home/ec2-user/Authentification
     pattern: "**"
     owner: ec2-user
     group: ec2-user
