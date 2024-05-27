@@ -18,14 +18,8 @@ then
     curl -fsSL https://rpm.nodesource.com/setup_14.x | bash -
     yum install -y nodejs
 
-    
-
 else
-    echo "Node.js is already installed."
-
-    
-
-
+    echo "Node.js is already installed." 
 fi
 
 # Remove existing node_modules if they exist
