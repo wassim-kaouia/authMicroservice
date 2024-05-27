@@ -22,6 +22,14 @@ then
 
 else
     echo "Node.js is already installed."
+
+     # Remove existing node_modules if they exist
+    rm -rf node_modules
+
+    echo "Running npm install to install dependencies with express also ...  "
+    npm install && npm install express
+
+
 fi
 
 
